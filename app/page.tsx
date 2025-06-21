@@ -214,7 +214,7 @@ export default function HomePage() {
             </div>
 
             {/* Empty State */}
-            {itinerary.length !== 0 && (
+            {itinerary.length === 0 && (
               <div className="text-center pt-12 pb-12 lg:pt-16 lg:pb-24">
                 <div>
                   <div className="w-20 lg:w-24 h-20 lg:h-24 bg-[#f0f8ff] rounded-full flex items-center justify-center mx-auto mb-6">
@@ -254,7 +254,7 @@ export default function HomePage() {
             )}
 
             {/* Itinerary sections */}
-            <div className="hidden">
+            <div>
               {
                 itinerary.length > 0 && (
                   <div className="pb-12 pt-10 lg:pb-16">
@@ -263,7 +263,7 @@ export default function HomePage() {
 
                     {/* Flight Sections */}
                     {flightItems.length > 0 && (
-                      <div className="mb-6 lg:mb-8 px-6 pt-5 pb-10 bg-[#F0F2F5] rounded hidden">
+                      <div className="mb-6 lg:mb-8 px-6 pt-5 pb-10 bg-[#F0F2F5] rounded">
 
                         <div className="">
                           <div className="mb-6 flex flex-colm:flex-row items-start sm:items-center justify-between gap-4">
@@ -402,7 +402,7 @@ export default function HomePage() {
 
                     {/* Hotels section */}
                     {hotelItems.length > 0 && (
-                      <div className="mb-6 lg:mb-8 px-6 pt-5 pb-10 bg-[#344054] rounded hidden">
+                      <div className="mb-6 lg:mb-8 px-6 pt-5 pb-10 bg-[#344054] rounded">
 
                         <div className="">
                           <div className="mb-6 flex flex-cosm:flex-row items-start sm:items-center justify-between gap-4">

@@ -18,7 +18,7 @@ export default function MobileNav() {
           <Menu className="w-5 h-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-72 p-0">
+      <SheetContent side="left" className="w-72 p-0 overflow-y-auto">
         <div className="flex items-center justify-between p-4 border-b">
           <div className="flex items-center gap-3">
             <LogoIcon className="size-10" />

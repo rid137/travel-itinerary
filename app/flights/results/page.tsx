@@ -171,8 +171,8 @@ export default function FlightResultsPage() {
     <div className="min-h-screen bg-[#f0f2f5]">
       {/* Header */}
       <header className="bg-[#0d6efd] text-white px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center gap-4">
-          <Button variant="ghost" onClick={() => router.back()} className="text-white hover:bg-transparent hover:text-white">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center gap-4">
+          <Button variant="ghost" onClick={() => router.back()} className="text-white hover:bg-transparent hover:text-white w-fit">
             <ArrowLeft className="w-4 h-4" />
           </Button>
           <div>
@@ -230,7 +230,7 @@ export default function FlightResultsPage() {
                       />
                       <div>
                         <div className="font-semibold text-dark">{flight.airline}</div>
-                        <div className="text-sm text-gray">{flight.flightNumber}</div>
+                        <div className="text-sm text-center lg:text-left text-gray">{flight.flightNumber}</div>
                       </div>
                     </div>
 
@@ -264,11 +264,11 @@ export default function FlightResultsPage() {
                       </div>
                     </div>
 
-                    <div className="text-right">
+                    <div className="lg:text-right">
                       <div className="font-semibold text-dark text-xl">
                         {flight.price.currency} {flight.price.amount.toLocaleString()}
                       </div>
-                      <div className="text-sm text-gray">Total price</div>
+                      <div className="text-sm text-center lg:text-right text-gray">Total price</div>
                     </div>
 
                     <Button
@@ -296,7 +296,7 @@ export default function FlightResultsPage() {
 
                   {flight.facilities.length > 0 && (
                     <div className="mt-4 pt-4 border-t border-[#e4e7ec]">
-                      <div className="flex items-center gap-4 text-sm text-gray">
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray">
                         <span className="font-medium">Facilities:</span>
                         {flight.facilities.map((facility, index) => (
                           <span key={index}>{facility}</span>

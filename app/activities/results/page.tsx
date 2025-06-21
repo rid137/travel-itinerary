@@ -125,8 +125,8 @@ export default function ActivitiesResultsPage() {
     <div className="min-h-screen bg-[#f0f2f5]">
       {/* Header */}
       <header className="bg-[#0d6efd] text-white px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center gap-4 flex-col sm:flex-row">
-          <Button variant="ghost" onClick={() => router.back()} className="text-white hover:bg-transparent hover:text-white">
+        <div className="max-w-7xl mx-auto flex sm:items-center gap-4 flex-col sm:flex-row">
+          <Button variant="ghost" onClick={() => router.back()} className="text-white hover:bg-transparent hover:text-white w-fit">
             <ArrowLeft className="w-4 h-4" />
           </Button>
           <div>

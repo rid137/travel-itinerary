@@ -51,7 +51,7 @@ export const ItineraryProvider: React.FC<ItineraryProviderProps> = ({
         setItinerary(parsedItinerary);
       }
     } catch (error) {
-      console.error('Error loading itinerary from localStorage:', error);
+      console.log('Error loading itinerary from localStorage:', error);
     } finally {
       setHasHydrated(true);
     }
@@ -62,7 +62,7 @@ export const ItineraryProvider: React.FC<ItineraryProviderProps> = ({
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(itinerary));
     } catch (error) {
-      console.error('Error saving itinerary to localStorage:', error);
+      console.log('Error saving itinerary to localStorage:', error);
     }
   }, [itinerary, hasHydrated]);
 

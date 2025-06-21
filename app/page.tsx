@@ -158,9 +158,9 @@ export default function HomePage() {
                 </div>
 
                 <h2 className="text-xl lg:text-2xl font-semibold text-black mb-1">Bahamas Family Trip</h2>
-                <div className="flex items-cen gap-1 mb-4">
+                <div className="flex flex-col sm:flex-row items-cen gap-1 mb-4">
                   <p className="text-gray-1 font-medium">New York,  United States of America </p>
-                  <span className="text-[#D0D5DD]"> | </span>
+                  <span className="text-[#D0D5DD] hidden sm:block"> | </span>
                   <p className="text-gray-1 font-medium">Solo Trip</p>
                 </div>
 
@@ -214,7 +214,7 @@ export default function HomePage() {
             </div>
 
             {/* Empty State */}
-            {itinerary.length === 0 && (
+            {itinerary.length !== 0 && (
               <div className="text-center pt-12 pb-12 lg:pt-16 lg:pb-24">
                 <div>
                   <div className="w-20 lg:w-24 h-20 lg:h-24 bg-[#f0f8ff] rounded-full flex items-center justify-center mx-auto mb-6">
@@ -254,7 +254,7 @@ export default function HomePage() {
             )}
 
             {/* Itinerary sections */}
-            <div className="">
+            <div className="hidden">
               {
                 itinerary.length > 0 && (
                   <div className="pb-12 pt-10 lg:pb-16">

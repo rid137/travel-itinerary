@@ -51,7 +51,7 @@ export default function AttractionLocationSearch({ placeholder, onSelect, value 
         const results = await activityService.searchLocations(query)
         setLocations(results)
       } catch (error) {
-        console.error("Error searching attraction locations:", error)
+        console.log("Error searching attraction locations:", error)
         setLocations([])
       } finally {
         setIsLoading(false)

@@ -59,8 +59,8 @@ export default function FlightSearchPage() {
     <div className="min-h-screen bg-[#f0f2f5]">
       {/* Header */}
       <header className="bg-primary text-white px-6 py-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center gap-4">
-          <Button variant="ghost" onClick={() => router.back()} className="text-white hover:bg-transparent hover:text-white">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center gap-4">
+          <Button variant="ghost" onClick={() => router.back()} className="text-white hover:bg-transparent hover:text-white w-fit">
             <ArrowLeft className="w-4 h-4" />
           </Button>
           <div>

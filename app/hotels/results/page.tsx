@@ -150,8 +150,8 @@ export default function HotelResultsPage() {
     <div className="min-h-screen bg-[#f0f2f5]">
       {/* Header */}
       <header className="bg-[#0d6efd] text-white px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center gap-4">
-          <Button variant="ghost" onClick={() => router.back()} className="text-white hover:bg-transparent hover:text-white">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center gap-4">
+          <Button variant="ghost" onClick={() => router.back()} className="text-white hover:bg-transparent hover:text-white w-fit">
             <ArrowLeft className="w-4 h-4" />
           </Button>
           <div>
@@ -211,8 +211,8 @@ export default function HotelResultsPage() {
                       />
                     </div>
 
-                    <div className="flex-1 p-6">
-                      <div className="flex justify-between items-start">
+                    <div className="flex-1 p-4 lg:p-6">
+                      <div className="flex flex-col lg:flex-row gap-4 justify-between items-start">
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-2">
                             <h3 className="text-xl font-semibold text-dark">{hotel.name}</h3>
@@ -251,7 +251,7 @@ export default function HotelResultsPage() {
                           </div>
                         </div>
 
-                        <div className="text-right ml-6">
+                        <div className="lg:text-right">
                           <div className="text-2xl font-bold text-dark mb-1">
                             {hotel.price.currency} {hotel.price.amount.toLocaleString()}
                           </div>

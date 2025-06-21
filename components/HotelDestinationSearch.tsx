@@ -44,7 +44,7 @@ export default function HotelDestinationSearch({ placeholder, onSelect, value }:
       const results = await hotelService.searchDestinations(query)
       setDestinations(results)
     } catch (error) {
-      console.error("Error searching hotel destinations:", error)
+      console.log("Error searching hotel destinations:", error)
     } finally {
       setIsLoading(false)
     }
